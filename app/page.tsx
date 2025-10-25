@@ -15,7 +15,6 @@ import {
   GpsFixed,
   Analytics,
   TrendingUp,
-
   FilterList,
   Sync,
   Speed,
@@ -151,8 +150,6 @@ export default function Home() {
 
       {/* How it works  */}
       <HowItWorks />
-
-
 
       {/* Content Section */}
       <TabbedSection
@@ -302,7 +299,7 @@ export default function Home() {
                 variant="outlined"
                 size="large"
                 component={Link}
-                href="/demo"
+                href="/contact"
                 sx={{
                   borderColor: 'primary.main',
                   color: 'primary.main',

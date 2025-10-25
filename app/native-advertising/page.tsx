@@ -13,7 +13,6 @@ import {
 } from '@mui/material'
 import {
   Article,
-
   ArrowForward,
   PlayArrow,
   IntegrationInstructions,
@@ -93,26 +92,26 @@ export default function NativeAdvertisingPage() {
                 into premium content environments and drive meaningful
                 interactions.
               </Typography>
-               <Link href="/contact" passHref>
-              <Stack direction="row" spacing={3}>
-                <Button
-                  variant="outlined"
-                  size="large"
-                  sx={{
-                    borderColor: 'rgba(255,255,255,0.3)',
-                    color: 'white',
-                    px: 4,
-                    py: 1.5,
-                    fontSize: '1.1rem',
-                    '&:hover': {
-                      bgcolor: 'rgba(255,255,255,0.1)',
-                      borderColor: 'rgba(255,255,255,0.5)',
-                    },
-                  }}
-                >
-                  Get Started
-                </Button>
-              </Stack>
+              <Link href="/contact" passHref>
+                <Stack direction="row" spacing={3}>
+                  <Button
+                    variant="outlined"
+                    size="large"
+                    sx={{
+                      borderColor: 'rgba(255,255,255,0.3)',
+                      color: 'white',
+                      px: 4,
+                      py: 1.5,
+                      fontSize: '1.1rem',
+                      '&:hover': {
+                        bgcolor: 'rgba(255,255,255,0.1)',
+                        borderColor: 'rgba(255,255,255,0.5)',
+                      },
+                    }}
+                  >
+                    Get Started
+                  </Button>
+                </Stack>
               </Link>
             </Grid>
             <Grid item xs={12} md={6}>
@@ -186,16 +185,22 @@ export default function NativeAdvertisingPage() {
 
       {/* Stats Section */}
       <Box sx={{ py: 12, bgcolor: '#f8fafc' }}>
+        {' '}
         <Container maxWidth="lg">
+          {' '}
           <Box sx={{ textAlign: 'center', mb: 8 }}>
+            {' '}
             <Typography variant="h3" sx={{ mb: 2, fontWeight: 800 }}>
-              Native Advertising Performance
-            </Typography>
+              {' '}
+              Native Advertising Performance{' '}
+            </Typography>{' '}
             <Typography variant="h6" color="text.secondary">
-              See why leading B2B brands choose native advertising
-            </Typography>
-          </Box>
+              {' '}
+              See why leading B2B brands choose native advertising{' '}
+            </Typography>{' '}
+          </Box>{' '}
           <Grid container spacing={4}>
+            {' '}
             {[
               { value: '3x', label: 'Higher Engagement', color: '#059669' },
               { value: '70%', label: 'Better Brand Recall', color: '#7c3aed' },
@@ -203,6 +208,7 @@ export default function NativeAdvertisingPage() {
               { value: '85%', label: 'Less Ad Fatigue', color: '#ef4444' },
             ].map((stat, index) => (
               <Grid item xs={6} md={3} key={index}>
+                {' '}
                 <Card
                   sx={{
                     textAlign: 'center',
@@ -216,6 +222,7 @@ export default function NativeAdvertisingPage() {
                     transition: 'all 0.3s ease',
                   }}
                 >
+                  {' '}
                   <Typography
                     variant="h2"
                     sx={{
@@ -225,23 +232,25 @@ export default function NativeAdvertisingPage() {
                       fontSize: { xs: '2rem', md: '2.5rem' },
                     }}
                   >
-                    {stat.value}
-                  </Typography>
+                    {' '}
+                    {stat.value}{' '}
+                  </Typography>{' '}
                   <Typography
                     variant="h6"
                     color="text.secondary"
                     sx={{ fontWeight: 600 }}
                   >
-                    {stat.label}
-                  </Typography>
-                </Card>
+                    {' '}
+                    {stat.label}{' '}
+                  </Typography>{' '}
+                </Card>{' '}
               </Grid>
-            ))}
-          </Grid>
-        </Container>
+            ))}{' '}
+          </Grid>{' '}
+        </Container>{' '}
       </Box>
 
-       {/* Section-3 */}
+      {/* Section-3 */}
       <BrandLogo />
 
       {/* Features Section */}
@@ -779,8 +788,8 @@ export default function NativeAdvertisingPage() {
                 }}
               >
                 <Typography variant="h4" sx={{ mb: 3, fontWeight: 700 }}>
-                  &ldquo;Native advertising increased our lead quality by 85% while
-                  reducing cost per acquisition by 40%.&rdquo;
+                  &ldquo;Native advertising increased our lead quality by 85%
+                  while reducing cost per acquisition by 40%.&rdquo;
                 </Typography>
                 <Typography
                   color="text.secondary"
@@ -944,29 +953,29 @@ export default function NativeAdvertisingPage() {
               Start engaging B2B audiences with seamless native advertising that
               drives real results
             </Typography>
-             <Link href="/contact" passHref>
-            <Stack
-              direction={{ xs: 'column', sm: 'row' }}
-              spacing={3}
-              justifyContent="center"
-            >
-              <Button
-                variant="contained"
-                size="large"
-                endIcon={<ArrowForward />}
-                sx={{
-                  bgcolor: 'white',
-                  color: '#059669',
-                  px: 6,
-                  py: 2,
-                  fontSize: '1.2rem',
-                  fontWeight: 700,
-                  '&:hover': { bgcolor: 'rgba(255,255,255,0.9)' },
-                }}
+            <Link href="/contact" passHref>
+              <Stack
+                direction={{ xs: 'column', sm: 'row' }}
+                spacing={3}
+                justifyContent="center"
               >
-                Start Free Trial
-              </Button>
-            </Stack>
+                <Button
+                  variant="contained"
+                  size="large"
+                  endIcon={<ArrowForward />}
+                  sx={{
+                    bgcolor: 'white',
+                    color: '#059669',
+                    px: 6,
+                    py: 2,
+                    fontSize: '1.2rem',
+                    fontWeight: 700,
+                    '&:hover': { bgcolor: 'rgba(255,255,255,0.9)' },
+                  }}
+                >
+                  Start Free Trial
+                </Button>
+              </Stack>
             </Link>
           </Box>
         </Container>

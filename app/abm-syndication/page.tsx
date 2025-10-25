@@ -473,17 +473,23 @@ const Page = () => {
 
       {/* ============================== */}
       <Box sx={{ py: 12, bgcolor: 'grey.50' }}>
+        {' '}
         <Container maxWidth="lg">
+          {' '}
           <Box sx={{ textAlign: 'center', mb: 8 }}>
+            {' '}
             <Typography variant="h3" sx={{ mb: 3, fontWeight: 700 }}>
-              How ABM Content Syndication Works
-            </Typography>
+              {' '}
+              How ABM Content Syndication Works{' '}
+            </Typography>{' '}
             <Typography variant="h6" color="text.secondary">
+              {' '}
               Simple steps to launch your Account-Based Marketing content
-              syndication campaign
-            </Typography>
-          </Box>
+              syndication campaign{' '}
+            </Typography>{' '}
+          </Box>{' '}
           <Grid container spacing={4}>
+            {' '}
             {[
               {
                 step: '01',
@@ -511,7 +517,9 @@ const Page = () => {
               },
             ].map((item, index) => (
               <Grid item xs={12} md={3} key={index}>
+                {' '}
                 <Box sx={{ textAlign: 'center' }}>
+                  {' '}
                   <Typography
                     variant="h2"
                     sx={{
@@ -521,19 +529,22 @@ const Page = () => {
                       mb: 2,
                     }}
                   >
-                    {item.step}
-                  </Typography>
+                    {' '}
+                    {item.step}{' '}
+                  </Typography>{' '}
                   <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
-                    {item.title}
-                  </Typography>
+                    {' '}
+                    {item.title}{' '}
+                  </Typography>{' '}
                   <Typography color="text.secondary">
-                    {item.description}
-                  </Typography>
-                </Box>
+                    {' '}
+                    {item.description}{' '}
+                  </Typography>{' '}
+                </Box>{' '}
               </Grid>
-            ))}
-          </Grid>
-        </Container>
+            ))}{' '}
+          </Grid>{' '}
+        </Container>{' '}
       </Box>
 
       {/* ========================== Section - 6 ========================== */}
@@ -834,7 +845,7 @@ const Page = () => {
                 lineHeight: 1.2,
               }}
             >
-             Expert team management for measurable impact
+              Expert team management for measurable impact
             </Typography>
             <Typography
               variant="body1"
@@ -851,8 +862,10 @@ const Page = () => {
                 lineHeight: 1.7,
               }}
             >
-              Our team manages ABM content syndication campaigns, delivering personalized multi-channel content to the right decision-makers, optimizing engagement, tracking performance, and ensuring measurable ROI.
-
+              Our team manages ABM content syndication campaigns, delivering
+              personalized multi-channel content to the right decision-makers,
+              optimizing engagement, tracking performance, and ensuring
+              measurable ROI.
             </Typography>
           </Box>
           {/* Button */}

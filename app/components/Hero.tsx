@@ -135,7 +135,7 @@ export default function Hero() {
               variant="outlined"
               size="large"
               component={Link}
-              href="/demo"
+              href="/contact"
               startIcon={<PlayArrow />}
               sx={{
                 borderColor: 'white',

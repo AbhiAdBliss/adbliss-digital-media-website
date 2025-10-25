@@ -1,8 +1,8 @@
 'use client'
 import { Box, Typography, Button } from '@mui/material'
 import { useAutoSlider } from '../hooks/useAutoSlider'
-import { siteConfig } from '../../config'
 import Link from 'next/link'
+import { siteConfig } from '../../config'
 
 export default function VideoCarousel() {
   const { currentIndex } = useAutoSlider(
@@ -66,11 +66,13 @@ export default function VideoCarousel() {
               Drive measurable growth with data-powered advertising that reaches
               the right decision-makers at the perfect moment.
             </Typography>
+
+            {/* ✅ Updated Contact Button */}
             <Button
               variant="contained"
               size="large"
               component={Link}
-              href={siteConfig.video.button.href}
+              href="/contact"
               sx={{
                 background: `linear-gradient(45deg, ${siteConfig.colors.primary}, ${siteConfig.colors.secondary})`,
                 color: 'white',
@@ -84,7 +86,7 @@ export default function VideoCarousel() {
                 transition: 'all 0.3s ease',
               }}
             >
-              {siteConfig.video.button.text}
+              Start Free Trial
             </Button>
           </Box>
         </Box>

@@ -59,7 +59,11 @@ const industries = [
   { name: 'Gaming', icon: <SportsEsportsIcon />, color: '#10b981' },
   { name: 'Retail & E-Commerce', icon: <TvIcon />, color: '#f59e0b' },
   { name: 'Finance', icon: <ShowChartIcon />, color: '#14b8a6' },
-  { name: 'Media & Entertainment', icon: <PlayCircleFilledIcon />, color: '#ec4899' },
+  {
+    name: 'Media & Entertainment',
+    icon: <PlayCircleFilledIcon />,
+    color: '#ec4899',
+  },
 ]
 
 const adFormats = [
@@ -93,7 +97,7 @@ export default function CasesPage() {
       {/* Hero */}
       <Box
         sx={{
-          background: `linear-gradient(135deg, ${siteConfig.colors.primary}, ${siteConfig.colors.secondary})`,
+          background: `linear-gradient(135deg, ${siteConfig.colors.primary} 0%, ${siteConfig.colors.secondary} 100%)`,
           color: '#fff',
           py: { xs: 12, md: 16 },
           textAlign: 'center',
@@ -104,7 +108,8 @@ export default function CasesPage() {
             Proven Success Stories 🚀
           </Typography>
           <Typography variant="h6" color="rgba(255,255,255,0.85)">
-            See how AdBliss drives measurable growth and engagement for brands globally.
+            See how AdBliss drives measurable growth and engagement for brands
+            globally.
           </Typography>
         </Container>
       </Box>
@@ -188,12 +193,7 @@ export default function CasesPage() {
       {/* Industry Expertise */}
       <Box sx={{ py: 12, background: '#f9fafc' }}>
         <Container>
-          <Typography
-            variant="h4"
-            fontWeight={800}
-            textAlign="center"
-            mb={6}
-          >
+          <Typography variant="h4" fontWeight={800} textAlign="center" mb={6}>
             Industry Expertise 🌎
           </Typography>
           <Grid container spacing={4} justifyContent="center">
@@ -292,74 +292,76 @@ export default function CasesPage() {
         </Container>
       </Box>
 
- {/* Additional Section: Advertisement Trends */}
-<Box sx={{ py: 12, background: '#f9fafc' }}>
-  <Container>
-    <Typography variant="h4" fontWeight={800} textAlign="center" mb={6}>
-      Emerging Advertising Trends
-    </Typography>
-    <Grid container spacing={4}>
-      <Grid item xs={12} md={4}>
-        <Paper
-          elevation={4}
-          sx={{
-            p: 4,
-            borderRadius: 3,
-            height: '100%',
-            transition: '0.3s',
-            '&:hover': { transform: 'translateY(-5px)', boxShadow: 6 },
-          }}
-        >
-          <Typography variant="h6" fontWeight={700} mb={2}>
-            AI-Powered Creatives
+      {/* Additional Section: Advertisement Trends */}
+      <Box sx={{ py: 12, background: '#f9fafc' }}>
+        <Container>
+          <Typography variant="h4" fontWeight={800} textAlign="center" mb={6}>
+            Emerging Advertising Trends
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Brands increasingly leverage AI to generate personalized creatives at scale.
-          </Typography>
-        </Paper>
-      </Grid>
-      <Grid item xs={12} md={4}>
-        <Paper
-          elevation={4}
-          sx={{
-            p: 4,
-            borderRadius: 3,
-            height: '100%',
-            transition: '0.3s',
-            '&:hover': { transform: 'translateY(-5px)', boxShadow: 6 },
-          }}
-        >
-          <Typography variant="h6" fontWeight={700} mb={2}>
-            Short-Form Video Ads
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Platforms like TikTok and YouTube Shorts dominate audience engagement with bite-sized content.
-          </Typography>
-        </Paper>
-      </Grid>
-      <Grid item xs={12} md={4}>
-        <Paper
-          elevation={4}
-          sx={{
-            p: 4,
-            borderRadius: 3,
-            height: '100%',
-            transition: '0.3s',
-            '&:hover': { transform: 'translateY(-5px)', boxShadow: 6 },
-          }}
-        >
-          <Typography variant="h6" fontWeight={700} mb={2}>
-            Data-Driven Targeting
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Sophisticated analytics and AI targeting help maximize ROI on ad spend.
-          </Typography>
-        </Paper>
-      </Grid>
-    </Grid>
-  </Container>
-</Box>
-
+          <Grid container spacing={4}>
+            <Grid item xs={12} md={4}>
+              <Paper
+                elevation={4}
+                sx={{
+                  p: 4,
+                  borderRadius: 3,
+                  height: '100%',
+                  transition: '0.3s',
+                  '&:hover': { transform: 'translateY(-5px)', boxShadow: 6 },
+                }}
+              >
+                <Typography variant="h6" fontWeight={700} mb={2}>
+                  AI-Powered Creatives
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Brands increasingly leverage AI to generate personalized
+                  creatives at scale.
+                </Typography>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Paper
+                elevation={4}
+                sx={{
+                  p: 4,
+                  borderRadius: 3,
+                  height: '100%',
+                  transition: '0.3s',
+                  '&:hover': { transform: 'translateY(-5px)', boxShadow: 6 },
+                }}
+              >
+                <Typography variant="h6" fontWeight={700} mb={2}>
+                  Short-Form Video Ads
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Platforms like TikTok and YouTube Shorts dominate audience
+                  engagement with bite-sized content.
+                </Typography>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Paper
+                elevation={4}
+                sx={{
+                  p: 4,
+                  borderRadius: 3,
+                  height: '100%',
+                  transition: '0.3s',
+                  '&:hover': { transform: 'translateY(-5px)', boxShadow: 6 },
+                }}
+              >
+                <Typography variant="h6" fontWeight={700} mb={2}>
+                  Data-Driven Targeting
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Sophisticated analytics and AI targeting help maximize ROI on
+                  ad spend.
+                </Typography>
+              </Paper>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
 
       {/* CTA */}
       <Box

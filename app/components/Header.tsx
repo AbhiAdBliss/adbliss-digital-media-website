@@ -27,12 +27,11 @@ import {
   Signpost,
   Article,
   Headphones,
-  Business,
   Group,
   Info,
   ContactMail,
   Book,
-  Description,
+  ArrowDropDown,
 } from '@mui/icons-material'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -59,7 +58,6 @@ interface HeaderProps {
 
 export default function Header({ minimal = false }: HeaderProps) {
   const [activeMenu, setActiveMenu] = useState<string | null>(null)
-
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState<{
     [key: string]: boolean
@@ -87,10 +85,10 @@ export default function Header({ minimal = false }: HeaderProps) {
       'ABM CTV': Tv,
       'ABM Leads': Group,
       'ABM Syndication': Article,
-      //Resources
-      Blog: Description,
+      // Resources
+      Adspecs: Tv,
       Cases: Book,
-      //Company
+      // Company
       'About Us': Info,
       Contact: ContactMail,
     }
@@ -125,7 +123,7 @@ export default function Header({ minimal = false }: HeaderProps) {
     {
       name: 'Resources',
       dropdown: [
-        { title: 'Blog', href: '/blog' },
+        { title: 'Adspecs', href: '/Adspecs' },
         { title: 'Cases', href: '/cases' },
       ],
     },
@@ -199,26 +197,29 @@ export default function Header({ minimal = false }: HeaderProps) {
                   alignItems: 'center',
                   gap: 2,
                 }}
+                onMouseLeave={() => setActiveMenu(null)}
               >
                 {navItems.map((item) => (
                   <Box key={item.name} sx={{ position: 'relative' }}>
                     <Button
                       color="inherit"
-                      onMouseEnter={() => {
-                        setActiveMenu(item.name)
-                      }}
+                      onMouseEnter={() => setActiveMenu(item.name)}
                       sx={{
                         fontWeight: 500,
                         fontSize: '1.1rem',
                         cursor: 'pointer',
                         transition: 'all 0.3s ease',
                         '&:hover': { bgcolor: 'rgba(255,255,255,0.08)' },
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 0.2,
                       }}
+                      endIcon={item.dropdown ? <ArrowDropDown /> : null}
                     >
                       {item.name}
                     </Button>
 
-                    {/* Dropdown (Unified Styling for All Menus) */}
+                    {/* Dropdown */}
                     {activeMenu === item.name && (
                       <Paper
                         onMouseEnter={() => setActiveMenu(item.name)}
@@ -228,8 +229,7 @@ export default function Header({ minimal = false }: HeaderProps) {
                           top: '100%',
                           left: 0,
                           zIndex: 1300,
-                          minWidth:
-                            item.dropdown.length > 4 ? 480 : 320,
+                          minWidth: item.dropdown.length > 4 ? 480 : 320,
                           bgcolor: '#ffffff',
                           borderRadius: '20px',
                           boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
@@ -303,7 +303,6 @@ export default function Header({ minimal = false }: HeaderProps) {
                     )}
                   </Box>
                 ))}
-
                 {/* CTA Button */}
                 <Button
                   variant="contained"
@@ -376,22 +375,37 @@ export default function Header({ minimal = false }: HeaderProps) {
                       sx={{ borderRadius: 1, mb: 0.5 }}
                     >
                       <ListItemText primary={item.name} />
-                      {mobileMenuOpen[item.name] ? <ExpandLess /> : <ExpandMore />}
+                      {mobileMenuOpen[item.name] ? (
+                        <ExpandLess />
+                      ) : (
+                        <ExpandMore />
+                      )}
                     </ListItem>
                     <Collapse in={mobileMenuOpen[item.name]}>
                       <List sx={{ pl: 2 }}>
                         {item.dropdown.map((dropItem) => (
-                          <Box key={dropItem.title}>
-                            <ListItem
-                              button
-                              component={Link}
-                              href={dropItem.href}
-                              sx={{ borderRadius: 1, opacity: 0.9 }}
-                              onClick={() => setMobileOpen(false)}
-                            >
-                              <ListItemText primary={dropItem.title} />
-                            </ListItem>
-                          </Box>
+                          <ListItem
+                            key={dropItem.title}
+                            button
+                            component={Link}
+                            href={dropItem.href}
+                            sx={{ borderRadius: 1, opacity: 0.9 }}
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            <ListItemText
+                              primary={
+                                <Box
+                                  sx={{
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: 1,
+                                  }}
+                                >
+                                  {dropItem.title}
+                                </Box>
+                              }
+                            />
+                          </ListItem>
                         ))}
                       </List>
                     </Collapse>
