@@ -52,7 +52,7 @@ const Page = () => {
     {
       question: 'Why use CTV in your ABM strategy?',
       answer:
-        'Incorporating CTV in your ABM strategy enables you to reach B2B buyers during their off-work hours, when they are more receptive to content. With advanced targeting, CTV ensures that only relevant accounts see your ads, increasing the efficiency of your marketing spend and strengthening brand visibility.',
+        'Incorporating CTV in your ABM strategy enables you to reach Digital Marketing buyers during their off-work hours, when they are more receptive to content. With advanced targeting, CTV ensures that only relevant accounts see your ads, increasing the efficiency of your marketing spend and strengthening brand visibility.',
     },
     {
       question:
@@ -64,7 +64,7 @@ const Page = () => {
       question:
         'Can you expand on the existing market gaps in CTV and how ABM Connected TV will fill them?',
       answer:
-        'A key market gap in CTV is the lack of targeting capabilities for B2B marketers, as most CTV advertising is traditionally B2C-focused. ABM Connected TV fills this gap by using intent data to target specific accounts, allowing B2B brands to reach their audience with precision and relevance, even on a traditionally broad-reaching channel like CTV.',
+        'A key market gap in CTV is the lack of targeting capabilities for Digital Marketing marketers, as most CTV advertising is traditionally B2C-focused. ABM Connected TV fills this gap by using intent data to target specific accounts, allowing Digital Marketing brands to reach their audience with precision and relevance, even on a traditionally broad-reaching channel like CTV.',
     },
     {
       question: 'What are Connected TV devices?',
@@ -94,7 +94,7 @@ const Page = () => {
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} md={6}>
               <Typography variant="h2" sx={{ mb: 3, fontWeight: 800 }}>
-                ABM CTV Advertising for B2B Growth
+                ABM CTV Advertising for Digital Marketing Growth
               </Typography>
               <Typography
                 variant="h5"
@@ -696,7 +696,7 @@ const Page = () => {
               {
                 title: 'Cross-Device Video Inventory',
                 description:
-                  'Integrate CTV with desktop, mobile, and tablet video for seamless multi-device B2B engagement.',
+                  'Integrate CTV with desktop, mobile, and tablet video for seamless multi-device Digital Marketing engagement.',
                 features: ['Multi-Channel', 'High Reach', 'Device Sync'],
                 image: '📱',
               },

@@ -88,7 +88,7 @@ export default function NativeAdvertisingPage() {
                 variant="h5"
                 sx={{ mb: 4, opacity: 0.8, fontWeight: 400, lineHeight: 1.6 }}
               >
-                Engage B2B decision-makers with native ads that blend naturally
+                Engage Digital Marketing decision-makers with native ads that blend naturally
                 into premium content environments and drive meaningful
                 interactions.
               </Typography>
@@ -125,7 +125,7 @@ export default function NativeAdvertisingPage() {
               >
                 {/* Mock Article Cards */}
                 {[
-                  { title: 'B2B Marketing Trends 2024', sponsored: false },
+                  { title: 'AI-data Powered Marketing Trends 2024', sponsored: false },
                   {
                     title: 'Transform Your Sales Process with AdBliss',
                     sponsored: true,
@@ -196,7 +196,7 @@ export default function NativeAdvertisingPage() {
             </Typography>{' '}
             <Typography variant="h6" color="text.secondary">
               {' '}
-              See why leading B2B brands choose native advertising{' '}
+              See why leading Digital Marketing brands choose native advertising{' '}
             </Typography>{' '}
           </Box>{' '}
           <Grid container spacing={4}>
@@ -345,7 +345,7 @@ export default function NativeAdvertisingPage() {
               Native Ad Formats
             </Typography>
             <Typography variant="h6" color="text.secondary">
-              Choose the perfect format for your B2B campaign
+              Choose the perfect format for your Digital Marketing campaign
             </Typography>
           </Box>
           <Grid container spacing={4}>
@@ -469,7 +469,7 @@ export default function NativeAdvertisingPage() {
                 step: '01',
                 title: 'Define Your Audience',
                 description:
-                  'Target B2B decision-makers based on job titles, industries, company size, and behavioral data.',
+                  'Target Digital Marketing decision-makers based on job titles, industries, company size, and behavioral data.',
               },
               {
                 step: '02',
@@ -525,7 +525,7 @@ export default function NativeAdvertisingPage() {
                 Advanced Targeting Capabilities
               </Typography>
               <Typography variant="h6" color="text.secondary" sx={{ mb: 4 }}>
-                Reach the right B2B audience with precision targeting that
+                Reach the right Digital Marketing audience with precision targeting that
                 drives qualified leads and conversions.
               </Typography>
               <Stack spacing={3}>
@@ -595,7 +595,7 @@ export default function NativeAdvertisingPage() {
               Premium Publisher Network
             </Typography>
             <Typography variant="h6" color="text.secondary">
-              Access top-tier publishers and content platforms where your B2B
+              Access top-tier publishers and content platforms where your Digital Marketing
               audience engages
             </Typography>
           </Box>
@@ -629,7 +629,7 @@ export default function NativeAdvertisingPage() {
               {
                 category: 'Industry Websites',
                 description:
-                  'Specialized websites and portals focused on specific B2B industries.',
+                  'Specialized websites and portals focused on specific Digital Marketing industries.',
                 reach: '15M+ Decision Makers',
                 examples: ['TechCrunch', 'MarTech', 'Sales Hacker'],
               },
@@ -816,10 +816,10 @@ export default function NativeAdvertisingPage() {
             </Grid>
             <Grid item xs={12} md={6}>
               <Typography variant="h3" sx={{ mb: 3, fontWeight: 800 }}>
-                Proven Results for B2B Brands
+                Proven Results for Digital Marketing Brands
               </Typography>
               <Typography variant="h6" color="text.secondary" sx={{ mb: 4 }}>
-                See how leading B2B companies are using native advertising to
+                See how leading Digital Marketing companies are using native advertising to
                 drive qualified leads and revenue growth.
               </Typography>
               <Grid container spacing={3}>
@@ -950,7 +950,7 @@ export default function NativeAdvertisingPage() {
               Ready to Launch Native Campaigns?
             </Typography>
             <Typography variant="h5" sx={{ mb: 6, opacity: 0.9 }}>
-              Start engaging B2B audiences with seamless native advertising that
+              Start engaging Digital Marketing audiences with seamless native advertising that
               drives real results
             </Typography>
             <Link href="/contact" passHref>

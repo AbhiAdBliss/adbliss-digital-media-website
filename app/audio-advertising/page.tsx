@@ -91,7 +91,7 @@ export default function AudioAdvertisingPage() {
                     lineHeight: 1.6,
                   }}
                 >
-                  Reach B2B professionals during their commute, workout, and
+                  Reach Digital Marketing professionals during their commute, workout, and
                   downtime with targeted audio campaigns on podcasts, streaming
                   platforms, and digital radio.
                 </Typography>
@@ -279,7 +279,7 @@ export default function AudioAdvertisingPage() {
               }}
             />
             <Typography variant="h2" sx={{ mb: 3, color: 'text.primary' }}>
-              Accelerate Your B2B Growth with Audio
+              Accelerate Your Digital Marketing Growth with Audio
             </Typography>
             <Typography
               variant="h6"
@@ -372,7 +372,7 @@ export default function AudioAdvertisingPage() {
               color="text.secondary"
               sx={{ fontWeight: 400 }}
             >
-              Choose the perfect format for your B2B campaign
+              Choose the perfect format for your Digital Marketing campaign
             </Typography>
           </Box>
           <Grid container spacing={4}>
@@ -889,7 +889,7 @@ export default function AudioAdvertisingPage() {
               variant="h6"
               sx={{ mb: 4, color: 'text.secondary', fontWeight: 400 }}
             >
-              Start reaching B2B professionals with powerful audio advertising
+              Start reaching Digital Marketing professionals with powerful audio advertising
               that drives real results
             </Typography>
              <Link href="/contact" passHref>

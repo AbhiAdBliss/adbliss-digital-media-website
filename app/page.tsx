@@ -27,7 +27,7 @@ import TabbedSection from './components/TabbedSection'
 import OurServices from './components/OurServices'
 import FeatureGrid from './components/FeatureGrid'
 import VideoCarousel from './components/VideoCarousel'
-import Awards from './components/Awards'
+
 import Footer from './components/Footer'
 import { siteConfig } from '../config'
 import Link from 'next/link'
@@ -260,7 +260,7 @@ export default function Home() {
       <CaseStudies />
 
       {/* Awards */}
-      <Awards />
+    
 
       {/* CTA Section */}
       <Box sx={{ py: 12, bgcolor: 'grey.50' }}>

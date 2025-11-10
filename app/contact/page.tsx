@@ -14,9 +14,7 @@ import {
   ListItemText,
   InputAdornment,
   Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
+  
 } from '@mui/material'
 import { useState } from 'react'
 import { siteConfig } from '../../config'
@@ -33,7 +31,8 @@ import EmailIcon from '@mui/icons-material/Email'
 import PublicIcon from '@mui/icons-material/Public'
 import CommentIcon from '@mui/icons-material/Comment'
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
-import { styled } from '@mui/material/styles'
+
+import Footer from '../components/Footer'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -53,11 +52,7 @@ export default function ContactPage() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
-  const SuccessIcon = styled(CheckCircleOutlineIcon)(({ theme }) => ({
-    fontSize: 60,
-    color: theme.palette.success.main,
-    marginBottom: theme.spacing(2),
-   }))
+  
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -100,6 +95,9 @@ export default function ContactPage() {
 
   return (
     <>
+    
+
+    
       <Header />
       <Box sx={{ pt: 16, pb: 8, background: '#fafafa' }}>
         <Container maxWidth="lg">
@@ -110,7 +108,7 @@ export default function ContactPage() {
                 Let’s Connect 🚀
               </Typography>
               <Typography variant="h6" color="text.secondary" paragraph>
-                At <b>Adbliss</b>, we empower B2B companies with smarter
+                At <b>Adbliss</b>, we empower Digital Marketing companies with smarter
                 advertising solutions. Reach the right audience, generate
                 qualified leads, and maximize ROI.
               </Typography>
@@ -397,6 +395,83 @@ export default function ContactPage() {
   </Button>
 </Dialog>
 
+{/* section Location  */}
+ <Box py={12} sx={{ backgroundColor: '#f5f5f5', color: '#333' }}>
+        <Container maxWidth="lg">
+          {/* AdBliss label */}
+          <Typography
+            variant="subtitle1"
+            fontWeight={700}
+            align="center"
+            gutterBottom
+            sx={{ color: '#172c36', mb: 1, fontSize: 50 }}
+          >
+            AdBliss
+          </Typography>
+
+          {/* Main heading */}
+          <Typography
+            variant="h3"
+            fontWeight={800}
+            align="center"
+            gutterBottom
+            sx={{ mb: 6 }}
+          >
+            Global impact, local touch.
+          </Typography>
+
+          <Grid container spacing={4}>
+            {[
+              {
+                city: 'Bengaluru(Registered office)',
+                address: 'No. 426, 2nd Floor, Novel Tech Park, Kudlu Gate, Hosur Road, Bengaluru 560068 Karnataka',
+              },
+              {
+                city: 'Patna',
+                address:
+                  'zircon complax 3rd floor Anishabad,  oposite bharat petroleum Anishabad, Patna 800002',
+              },
+              {
+                city: 'Bengaluru',
+                address: '2nd Floor, Ojas Building, Shop 1316, D 9th Cross, 9th Main Rd, opp. to Tirumalagiri Venkateshwara Temple, above Harleys Fine Baking, 2nd Phase, J. P. Nagar, Bengaluru, Karnataka 560078',
+              },
+              {
+                city: 'Dubai',
+                address:
+                  '',
+              },
+              
+            ].map((office, i) => (
+              <Grid item xs={12} sm={6} md={3} key={i}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                  <Typography
+                    variant="h6"
+                    fontWeight={700}
+                    sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
+                  >
+                    <Box
+                      component="span"
+                      sx={{ color: '#8a2be2', display: 'inline-block' }}
+                    >
+                      📍
+                    </Box>
+                    {office.city}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{ whiteSpace: 'pre-line', color: '#555' }}
+                  >
+                    {office.address}
+                  </Typography>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+
+{/* footer */}
+<Footer/>
     </>
   )
 }

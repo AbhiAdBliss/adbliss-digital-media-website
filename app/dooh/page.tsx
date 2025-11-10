@@ -19,14 +19,13 @@ import {
   TrendingUp,
   Visibility,
   Speed,
-  ArrowForward,
 } from '@mui/icons-material'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { siteConfig } from '../../config'
 import BrandLogo from '../components/BrandLogo'
 import Link from 'next/link'
-
+import SmartDisplayIcon from '@mui/icons-material/SmartDisplay'
 
 export default function DOOHPage() {
   return (
@@ -55,25 +54,30 @@ export default function DOOHPage() {
                 variant="h5"
                 sx={{ mb: 4, opacity: 0.9, fontWeight: 400 }}
               >
-                Reach your B2B audience with premium digital billboards, transit
-                displays, and interactive screens in high-traffic business
-                districts.
+                Reach your Digital Marketing audience with premium digital
+                billboards, transit displays, and interactive screens in
+                high-traffic business districts.
               </Typography>
-               <Link href="/contact" passHref>
-              <Stack direction="row" spacing={2}>
-                <Button
-                  variant="outlined"
-                  size="large"
-                  sx={{
-                    borderColor: 'white',
-                    color: 'white',
-                    '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' },
-                  }}
-                >
-                  View Demo
-                </Button>
-              </Stack>
-              </Link>
+
+              <Button
+                component={Link}
+                href="/contact"
+                variant="outlined"
+                size="large"
+                sx={{
+                  borderColor: 'white',
+                  color: 'white',
+                  width: 'fit-content',
+                  px: 4,
+                  py: 1.2,
+                  fontWeight: 600,
+                  textTransform: 'none',
+                  display: 'inline-flex',
+                  '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' },
+                }}
+              >
+                View Demo
+              </Button>
             </Grid>
             <Grid item xs={12} md={6}>
               <Box
@@ -84,7 +88,7 @@ export default function DOOHPage() {
                   textAlign: 'center',
                 }}
               >
-                <Tv sx={{ fontSize: 120, mb: 2, opacity: 0.8 }} />
+                <SmartDisplayIcon sx={{ fontSize: 120, mb: 2, opacity: 0.8 }} />
                 <Typography variant="h6">Premium Digital Displays</Typography>
               </Box>
             </Grid>
@@ -123,12 +127,12 @@ export default function DOOHPage() {
           </Grid>
         </Container>
       </Box>
-      
+
       {/* Section-3 */}
       <BrandLogo />
 
       {/* Features Section */}
-      
+
       <Box sx={{ py: 12 }}>
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center', mb: 8 }}>
@@ -160,7 +164,7 @@ export default function DOOHPage() {
                 icon: <LocationOn />,
                 title: 'Strategic Locations',
                 description:
-                  'Premium placements in business districts, airports, and high-traffic areas where your B2B audience commutes.',
+                  'Premium placements in business districts, airports, and high-traffic areas where your Digital Marketing audience commutes.',
                 color: siteConfig.colors.primary,
               },
               {
@@ -454,7 +458,7 @@ export default function DOOHPage() {
                 </Typography>
                 <Typography sx={{ opacity: 0.9 }}>
                   Target specific business districts, airports, and high-traffic
-                  areas where your B2B audience is most active.
+                  areas where your Digital Marketing audience is most active.
                 </Typography>
               </Box>
             </Grid>
@@ -467,7 +471,7 @@ export default function DOOHPage() {
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center', mb: 8 }}>
             <Typography variant="h3" sx={{ mb: 3, fontWeight: 700 }}>
-              Why Choose DOOH for B2B Marketing?
+              Why Choose DOOH for Digital Marketing Marketing?
             </Typography>
           </Box>
           <Grid container spacing={4}>
@@ -540,13 +544,13 @@ export default function DOOHPage() {
                 }}
               >
                 <Typography variant="h4" sx={{ mb: 3, fontWeight: 700 }}>
-                  &ldquo;DOOH campaigns delivered 40% higher brand awareness compared
-                  to traditional advertising.&rdquo;
+                  &ldquo;DOOH campaigns delivered 40% higher brand awareness
+                  compared to traditional advertising.&rdquo;
                 </Typography>
                 <Typography color="text.secondary" sx={{ mb: 3 }}>
-                  TechCorp increased their B2B lead generation by 65% using
-                  strategic DOOH placements in business districts across major
-                  cities.
+                  TechCorp increased their Digital Marketing lead generation by
+                  65% using strategic DOOH placements in business districts
+                  across major cities.
                 </Typography>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                   <Avatar sx={{ bgcolor: siteConfig.colors.primary }}>
@@ -565,11 +569,11 @@ export default function DOOHPage() {
             </Grid>
             <Grid item xs={12} md={6}>
               <Typography variant="h3" sx={{ mb: 3, fontWeight: 700 }}>
-                Proven Results for B2B Brands
+                Proven Results for Digital Marketing Brands
               </Typography>
               <Typography variant="h6" color="text.secondary" sx={{ mb: 4 }}>
-                See how leading B2B companies are using DOOH to drive awareness
-                and generate qualified leads.
+                See how leading Digital Marketing companies are using DOOH to
+                drive awareness and generate qualified leads.
               </Typography>
               <Grid container spacing={3}>
                 {[
@@ -611,26 +615,26 @@ export default function DOOHPage() {
             </Typography>
             <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
               Connect with decision-makers through premium digital out-of-home
-              advertising. Start reaching your B2B audience today.
+              advertising. Start reaching your Digital Marketing audience today.
             </Typography>
-             <Link href="/contact" passHref>
-            <Stack
-              direction={{ xs: 'column', sm: 'row' }}
-              spacing={2}
-              justifyContent="center"
-            >
-              <Button
-                variant="outlined"
-                size="large"
-                sx={{
-                  borderColor: 'white',
-                  color: 'white',
-                  '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' },
-                }}
+            <Link href="/contact" passHref>
+              <Stack
+                direction={{ xs: 'column', sm: 'row' }}
+                spacing={2}
+                justifyContent="center"
               >
-                Schedule Demo
-              </Button>
-            </Stack>
+                <Button
+                  variant="outlined"
+                  size="large"
+                  sx={{
+                    borderColor: 'white',
+                    color: 'white',
+                    '&:hover': { bgcolor: 'rgba(255,255,255,0.1)' },
+                  }}
+                >
+                  Schedule Demo
+                </Button>
+              </Stack>
             </Link>
           </Box>
         </Container>

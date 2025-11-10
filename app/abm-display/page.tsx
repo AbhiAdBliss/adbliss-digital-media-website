@@ -59,7 +59,7 @@ const faqData = [
   },
   {
     question:
-      'What advertising formats does Madison Logic offer, and how do they enhance ABM strategies?',
+      'What advertising formats does AdBliss Digital Media offer, and how do they enhance ABM strategies?',
     answer: (
       <>
         Native Advertising: Ads that seamlessly integrate with the content and
@@ -105,7 +105,7 @@ const Page = () => {
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} md={6}>
               <Typography variant="h2" sx={{ mb: 3, fontWeight: 800 }}>
-                ABM CTV Advertising for B2B Growth
+                ABM CTV Advertising for Digital Marketing Growth
               </Typography>
               <Typography
                 variant="h5"
@@ -554,7 +554,7 @@ const Page = () => {
               Premium ABM Display Inventory
             </Typography>
             <Typography variant="h6" color="text.secondary">
-              Access diverse account-based digital inventory for maximum B2B
+              Access diverse account-based digital inventory for maximum Digital Marketing
               impact
             </Typography>
           </Box>
@@ -563,7 +563,7 @@ const Page = () => {
               {
                 title: 'Display Ad Networks ',
                 description:
-                  'Achieve wide reach across top display exchanges, programmatic platforms, and B2B networks.',
+                  'Achieve wide reach across top display exchanges, programmatic platforms, and Digital Marketing networks.',
                 features: ['4K Creative ', 'Real-Time Bidding', 'Brand Safe'],
                 image: '🖥️',
               },

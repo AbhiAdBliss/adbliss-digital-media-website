@@ -174,7 +174,7 @@ export default function VideoAdvertisingPage() {
         { value: '92%', desc: 'Of marketers say video delivers strong ROI.' },
         { value: '89%', desc: 'Of consumers say video convinced them to buy.' },
         { value: '51%', desc: 'Of people are more likely to share videos than any other content.' },
-        { value: '93%', desc: 'Of B2B buyers say video is essential in building trust in a brand.' },
+        { value: '93%', desc: 'Of Digital Marketing buyers say video is essential in building trust in a brand.' },
       ].map((stat, i) => (
         <Grid item xs={12} sm={6} md={3} key={i}>
           <Box textAlign="center">

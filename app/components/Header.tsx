@@ -72,7 +72,6 @@ export default function Header({ minimal = false }: HeaderProps) {
 
   const getIcon = (title: string) => {
     const iconMap: { [key: string]: any } = {
-      // Advertising
       Display: DisplaySettings,
       Video: PlayCircle,
       CTV: Tv,
@@ -80,17 +79,15 @@ export default function Header({ minimal = false }: HeaderProps) {
       DOOH: Signpost,
       Native: Article,
       Audio: Headphones,
-      // ABM
       'ABM Display': DisplaySettings,
       'ABM CTV': Tv,
       'ABM Leads': Group,
       'ABM Syndication': Article,
-      // Resources
       Adspecs: Tv,
       Cases: Book,
-      // Company
       'About Us': Info,
       Contact: ContactMail,
+      Documentation: Article,
     }
     const IconComponent = iconMap[title]
     return IconComponent ? (
@@ -132,6 +129,7 @@ export default function Header({ minimal = false }: HeaderProps) {
       dropdown: [
         { title: 'About Us', href: '/about' },
         { title: 'Contact', href: '/contact' },
+        { title: 'Documentation', href: '/Documentation' },
       ],
     },
   ]
@@ -147,14 +145,13 @@ export default function Header({ minimal = false }: HeaderProps) {
         }}
       >
         <Container maxWidth="xl">
-          <Toolbar
-            sx={{ justifyContent: 'space-between', minHeight: '80px', py: 0 }}
-          >
+          <Toolbar sx={{ justifyContent: 'space-between', minHeight: '80px', py: 0 }}>
             {/* Logo */}
             {siteConfig.logo.image ? (
               <Box
                 component={Link}
                 href="/"
+                prefetch={true}
                 sx={{
                   display: 'flex',
                   alignItems: 'center',
@@ -175,6 +172,7 @@ export default function Header({ minimal = false }: HeaderProps) {
                 variant="h5"
                 component={Link}
                 href="/"
+                prefetch={true}
                 sx={{
                   fontWeight: 800,
                   textDecoration: 'none',
@@ -242,9 +240,7 @@ export default function Header({ minimal = false }: HeaderProps) {
                           sx={{
                             display: 'grid',
                             gridTemplateColumns:
-                              item.dropdown.length > 4
-                                ? 'repeat(2, 1fr)'
-                                : '1fr',
+                              item.dropdown.length > 4 ? 'repeat(2, 1fr)' : '1fr',
                             gap: 0,
                             p: 3,
                           }}
@@ -254,6 +250,8 @@ export default function Header({ minimal = false }: HeaderProps) {
                               key={dropItem.title}
                               component={Link}
                               href={dropItem.href}
+                              prefetch={true}
+                              onClick={() => setActiveMenu(null)} // ✅ instant close
                               sx={{
                                 display: 'flex',
                                 alignItems: 'center',
@@ -303,11 +301,13 @@ export default function Header({ minimal = false }: HeaderProps) {
                     )}
                   </Box>
                 ))}
+
                 {/* CTA Button */}
                 <Button
                   variant="contained"
                   component={Link}
                   href="/contact"
+                  prefetch={true}
                   sx={{
                     ml: 2,
                     fontSize: '1rem',
@@ -369,17 +369,9 @@ export default function Header({ minimal = false }: HeaderProps) {
               <List>
                 {navItems.map((item) => (
                   <Box key={item.name}>
-                    <ListItem
-                      button
-                      onClick={() => toggleMobileMenu(item.name)}
-                      sx={{ borderRadius: 1, mb: 0.5 }}
-                    >
+                    <ListItem button onClick={() => toggleMobileMenu(item.name)} sx={{ borderRadius: 1, mb: 0.5 }}>
                       <ListItemText primary={item.name} />
-                      {mobileMenuOpen[item.name] ? (
-                        <ExpandLess />
-                      ) : (
-                        <ExpandMore />
-                      )}
+                      {mobileMenuOpen[item.name] ? <ExpandLess /> : <ExpandMore />}
                     </ListItem>
                     <Collapse in={mobileMenuOpen[item.name]}>
                       <List sx={{ pl: 2 }}>
@@ -389,18 +381,13 @@ export default function Header({ minimal = false }: HeaderProps) {
                             button
                             component={Link}
                             href={dropItem.href}
+                            prefetch={true}
                             sx={{ borderRadius: 1, opacity: 0.9 }}
                             onClick={() => setMobileOpen(false)}
                           >
                             <ListItemText
                               primary={
-                                <Box
-                                  sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    gap: 1,
-                                  }}
-                                >
+                                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                                   {dropItem.title}
                                 </Box>
                               }
@@ -416,6 +403,7 @@ export default function Header({ minimal = false }: HeaderProps) {
                     variant="contained"
                     component={Link}
                     href="/signup"
+                    prefetch={true}
                     fullWidth
                     sx={{
                       background: 'rgba(255,255,255,0.2)',

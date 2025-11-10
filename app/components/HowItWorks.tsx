@@ -128,28 +128,7 @@ export default function HowItWorks() {
           ))}
         </Grid>
 
-        {/* CTA Button */}
-        <Box sx={{ textAlign: 'center', mt: 8 }}>
-          <Button
-            variant="contained"
-            size="large"
-            sx={{
-              px: 4,
-              py: 1.5,
-              fontSize: '1rem',
-              borderRadius: 3,
-              background: (theme) =>
-                `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
-              '&:hover': {
-                background: (theme) =>
-                  `linear-gradient(45deg, ${theme.palette.secondary.main}, ${theme.palette.primary.main})`,
-              },
-            }}
-            onClick={() => router.push('/contact')}
-          >
-            Learn More
-          </Button>
-        </Box>
+        
       </Container>
 
       {/* Decorative angled divider (bottom) */}

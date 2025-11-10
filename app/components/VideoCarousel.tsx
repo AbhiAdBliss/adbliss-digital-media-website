@@ -60,7 +60,7 @@ export default function VideoCarousel() {
         >
           <Box sx={{ maxWidth: '500px' }}>
             <Typography variant="h3" sx={{ mb: 2, fontWeight: 700 }}>
-              Transform Your B2B Marketing
+              Transform Your Digital Marketing
             </Typography>
             <Typography variant="h6" sx={{ opacity: 0.9, mb: 3 }}>
               Drive measurable growth with data-powered advertising that reaches

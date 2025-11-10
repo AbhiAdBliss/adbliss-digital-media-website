@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import React, { useRef, useEffect, useState } from 'react'
 import Header from '../components/Header'
 import { FaHeart, FaSearch } from 'react-icons/fa'
@@ -9,6 +8,7 @@ import { TfiThought } from 'react-icons/tfi'
 import { FaChevronRight } from 'react-icons/fa6'
 import CountUp from 'react-countup'
 import Footer from '../components/Footer'
+import Link from 'next/link'
 import {
   Box,
   Typography,
@@ -20,7 +20,6 @@ import {
   Container,
 } from '@mui/material'
 import BrandLogo from '../components/BrandLogo'
-import Teammembers from '../components/Teammembers'
 
 // ------------------ Interfaces ------------------
 interface Value {
@@ -46,8 +45,6 @@ interface Step {
 }
 
 // ======================================================
-
-
 
 // ------------------ AnimatedCard ------------------
 const AnimatedCard: React.FC<AnimatedCardProps> = ({ value }) => {
@@ -140,15 +137,13 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ value }) => {
 
 // =====================================
 
-
-
 // ------------------ Page ------------------
 const Page: React.FC = () => {
   const values: Value[] = [
     {
       title: 'Growth',
       description:
-        'We celebrate creativity, initiative, and a desire to learn and improve continuously. When you grow as a professional, Eskimi grows with you!',
+        'We celebrate creativity, initiative, and a desire to learn and improve continuously. When you grow as a professional, AdBliss grows with you!',
     },
     {
       title: 'Ownership',
@@ -309,13 +304,14 @@ const Page: React.FC = () => {
             fontSize: { xs: '1.875rem', sm: '2.25rem', lg: '4rem' },
           }}
         >
-          Adbliss
+          AdBliss
           <Box
             component="span"
             sx={{
               background: 'linear-gradient(to right, #1976d2, #9c27b0)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
+              ml: 2,
             }}
           >
             values
@@ -419,160 +415,12 @@ const Page: React.FC = () => {
             </Typography>
           </Paper>
         </Box>
-
-        {/* Part 2 */}
-        <Box px={{ xs: 2, sm: 4, lg: 12 }} py={{ xs: 4, sm: 8 }} mt={10}>
-          <Grid container spacing={{ xs: 3, sm: 5, lg: 8 }}>
-            {/* Vision */}
-            <Grid item xs={12} md={6}>
-              <motion.div
-                initial={{ opacity: 0, y: 60, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-                viewport={{ once: true }}
-              >
-                <Paper
-                  elevation={6}
-                  sx={{
-                    borderRadius: 4,
-                    p: { xs: 2, sm: 4 },
-                    background:
-                      'linear-gradient(135deg, rgba(25, 118, 210, 0.15), rgba(156, 39, 176, 0.15))',
-                    transition: '0.3s',
-                    '&:hover': { transform: 'scale(1.05)' },
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      display: 'inline-block',
-                      bgcolor: '#c695cc',
-                      fontSize: { xs: '0.75rem', sm: '0.9rem' },
-                      fontWeight: 600,
-                      px: { xs: 2, sm: 3 },
-                      py: { xs: 1, sm: 1.5 },
-                      borderRadius: 4,
-                      mb: 2,
-                    }}
-                  >
-                    Vision
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{ fontSize: { xs: '1rem', sm: '1.125rem' } }}
-                  >
-                    To be the change agent of digital transformation, empowering
-                    brands to succeed in the digital age by delivering
-                    high-quality, scalable marketing solutions.
-                  </Typography>
-                </Paper>
-              </motion.div>
-            </Grid>
-            {/* Mission */}
-            <Grid item xs={12} md={6}>
-              <motion.div
-                initial={{ opacity: 0, y: 60, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Paper
-                  elevation={6}
-                  sx={{
-                    borderRadius: 4,
-                    p: { xs: 2, sm: 4 },
-                    background:
-                      'linear-gradient(135deg, rgba(25, 118, 210, 0.15), rgba(156, 39, 176, 0.15))',
-                    transition: '0.3s',
-                    '&:hover': { transform: 'scale(1.05)' },
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      display: 'inline-block',
-                      bgcolor: '#c695cc',
-                      fontSize: { xs: '0.75rem', sm: '0.9rem' },
-                      fontWeight: 600,
-                      px: { xs: 2, sm: 3 },
-                      py: { xs: 1, sm: 1.5 },
-                      borderRadius: 4,
-                      mb: 2,
-                    }}
-                  >
-                    Mission
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    sx={{ fontSize: { xs: '1rem', sm: '1.125rem' } }}
-                  >
-                    Our mission is to emerge as a global digital marketing
-                    leader by offering creative solutions that redefine the way
-                    companies connect, interact, and develop.
-                  </Typography>
-                </Paper>
-              </motion.div>
-            </Grid>
-            {/* Values (Full Width Below) */}
-            <motion.div
-              initial={{ opacity: 0, y: 60, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.9, ease: 'easeOut', delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <Paper
-                elevation={6}
-                sx={{
-                  borderRadius: 4,
-                  p: { xs: 3, sm: 5 },
-                  mt: { xs: 5, sm: 8 },
-                  background:
-                    'linear-gradient(135deg, rgba(25, 118, 210, 0.15), rgba(156, 39, 176, 0.15))',
-                  transition: '0.3s',
-                  '&:hover': { transform: 'scale(1.05)' },
-                }}
-              >
-                <Typography
-                  sx={{
-                    display: 'inline-block',
-                    bgcolor: '#c695cc',
-                    fontSize: { xs: '0.75rem', sm: '0.9rem' },
-                    fontWeight: 600,
-                    px: { xs: 2, sm: 3 },
-                    py: { xs: 1, sm: 1.5 },
-                    borderRadius: 4,
-                    mb: 2,
-                  }}
-                >
-                  Our Values
-                </Typography>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontSize: { xs: '1rem', sm: '1.125rem' },
-                    textAlign: 'justify',
-                  }}
-                >
-                  At BrandStory, our values are the pulse of our success and the
-                  foundation upon which everything is built. We are fueled by
-                  innovation, constantly pushing boundaries in order to pioneer
-                  new, daring solutions that spark real outcomes. Integrity is
-                  what grounds us, prompting us to build trust and transparency
-                  in every relationship, standing by our commitments. We
-                  flourish through collaboration, cherishing varied ideas and
-                  viewpoints that drive innovation and initiate revolutionary
-                  strategies. We continuously reach higher in our pursuit of
-                  excellence, producing each project better than the last one
-                  and delivering exceptional outcomes. Above all, we are
-                  motivated by our love for growth, enabling our clients and us
-                  to grow, change, and thrive in the ever-evolving digital
-                  marketing space.
-                </Typography>
-              </Paper>
-            </motion.div>
-          </Grid>
-        </Box>
       </Box>
       {/* Stats Section-5 */}
-      <Box ref={statsRef} sx={{ py: { xs: 6, md: 6 }, mt: 2 , backgroundColor:'#FAF9F6' }}>
+      <Box
+        ref={statsRef}
+        sx={{ py: { xs: 6, md: 6 }, mt: 2, backgroundColor: '#FAF9F6' }}
+      >
         <Typography
           variant="h3"
           align="center"
@@ -581,7 +429,7 @@ const Page: React.FC = () => {
             fontSize: { xs: '2rem', sm: '3rem', lg: '65px' },
           }}
         >
-          Adbliss
+          AdBliss
           <Box
             component="span"
             sx={{
@@ -655,7 +503,14 @@ const Page: React.FC = () => {
         </Box>
       </Box>
       {/* section-6 */}
-      <Box mt={16} zIndex={10} position="relative" bgcolor="#FAF9F6" pt={5} pb={7}>
+      <Box
+        mt={16}
+        zIndex={10}
+        position="relative"
+        // bgcolor="#FAF9F6"
+        pt={5}
+        pb={7}
+      >
         {/* Heading */}
         <Typography
           variant="h3"
@@ -734,12 +589,84 @@ const Page: React.FC = () => {
         </Container>
       </Box>
 
-{/* ======================================================== */}
-
-<Teammembers/>
+      {/* ======================================================== */}
 
 
+{/* section location  */}
+ <Box py={12} sx={{ backgroundColor: '#f5f5f5', color: '#333' }}>
+        <Container maxWidth="lg">
+          {/* AdBliss label */}
+          <Typography
+            variant="subtitle1"
+            fontWeight={700}
+            align="center"
+            gutterBottom
+            sx={{ color: '#172c36', mb: 1, fontSize: 50 }}
+          >
+            AdBliss
+          </Typography>
 
+          {/* Main heading */}
+          <Typography
+            variant="h3"
+            fontWeight={800}
+            align="center"
+            gutterBottom
+            sx={{ mb: 6 }}
+          >
+            Global impact, local touch.
+          </Typography>
+
+          <Grid container spacing={4}>
+            {[
+              {
+                city: 'Bengaluru(Registered Office)',
+                address: 'No. 426, 2nd Floor, Novel Tech Park, Kudlu Gate, Hosur Road, Bengaluru 560068 Karnataka',
+              },
+              {
+                city: 'Patna',
+                address:
+                  'zircon complax 3rd floor Anishabad,  oposite bharat petroleum Anishabad, Patna 800002',
+              },
+              {
+                city: 'Bengaluru',
+                address: '2nd Floor, Ojas Building, Shop 1316, D 9th Cross, 9th Main Rd, opp. to Tirumalagiri Venkateshwara Temple, above Harleys Fine Baking, 2nd Phase, J. P. Nagar, Bengaluru, Karnataka 560078',
+              },
+              {
+                city: 'Dubai',
+                address:
+                  '',
+              },
+              
+            ].map((office, i) => (
+              <Grid item xs={12} sm={6} md={3} key={i}>
+                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                  <Typography
+                    variant="h6"
+                    fontWeight={700}
+                    sx={{ display: 'flex', alignItems: 'center', gap: 1 }}
+                  >
+                    <Box
+                      component="span"
+                      sx={{ color: '#8a2be2', display: 'inline-block' }}
+                    >
+                      📍
+                    </Box>
+                    {office.city}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{ whiteSpace: 'pre-line', color: '#555' }}
+                  >
+                    {office.address}
+                  </Typography>
+                </Box>
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </Box>
+      {/* <Teammembers/> */}
 
       {/* section-7 */}
       <Box
@@ -748,7 +675,7 @@ const Page: React.FC = () => {
           py: { xs: 6, sm: 10 },
           background: 'linear-gradient(135deg, #059669, #8a53e7)',
           color: 'white',
-          mt: '100px',
+          pt: '100px',
         }}
       >
         <Container maxWidth="lg">
@@ -760,8 +687,7 @@ const Page: React.FC = () => {
                 fontWeight: 'bold',
                 fontSize: { xs: '24px', sm: '32px', lg: '55px' },
               }}
-            >
-            </Typography>
+            ></Typography>
           </Box>
           {/* Subtitle */}
           <Box textAlign="center" mb={4}>
@@ -794,36 +720,39 @@ const Page: React.FC = () => {
           </Box>
           {/* Button */}
           <Box display="flex" justifyContent="center" mt={6}>
-            <Button
-              variant="outlined"
-              endIcon={<FaChevronRight />}
-              sx={{
-                borderColor: '#f7faf9',
-                color: 'white',
-                fontSize:'19px',
-                fontWeight: 'bold',
-                px: { xs: 3, sm: 4 },
-                py: { xs: 1.5, sm: 2 },
-                borderRadius: 2,
-                transition: 'all 0.3s ease',
-                '&:hover': {
-                  backgroundColor: '#fdfcfd',
-                  color: '#333333',
-                  borderColor: '#fdfcfd',
-                },
-                '&:active': {
-                  transform: 'scale(0.95)',
-                  backgroundColor: '#7c3aed',
-                  color: '#fff',
-                },
-              }}
-            >
-              Get in Touch
-            </Button>
+            <Link href="/contact" passHref legacyBehavior>
+              <Button
+                component="a"
+                variant="outlined"
+                endIcon={<FaChevronRight />}
+                sx={{
+                  borderColor: '#f7faf9',
+                  color: 'white',
+                  fontSize: '19px',
+                  fontWeight: 'bold',
+                  px: { xs: 3, sm: 4 },
+                  py: { xs: 1.5, sm: 2 },
+                  borderRadius: 2,
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    backgroundColor: '#fdfcfd',
+                    color: '#333333',
+                    borderColor: '#fdfcfd',
+                  },
+                  '&:active': {
+                    transform: 'scale(0.95)',
+                    backgroundColor: '#7c3aed',
+                    color: '#fff',
+                  },
+                }}
+              >
+                Get in Touch
+              </Button>
+            </Link>
           </Box>
         </Container>
       </Box>
-      
+
       <Footer />
     </div>
   )

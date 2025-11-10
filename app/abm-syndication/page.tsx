@@ -122,7 +122,7 @@ const Page = () => {
                 variant="h5"
                 sx={{ mb: 4, opacity: 0.9, fontWeight: 400 }}
               >
-                Reach your B2B audience with premium digital billboards, transit
+                Reach your Digital Marketing audience with premium digital billboards, transit
                 displays, and interactive screens in high-traffic business
                 districts.
               </Typography>

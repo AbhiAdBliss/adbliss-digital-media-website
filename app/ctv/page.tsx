@@ -33,8 +33,8 @@ import BrandLogo from '../components/BrandLogo'
 
 
 const statsData = [
-  { label: 'Household Reach', value: '1.5M+', icon: <PeopleIcon fontSize="large" /> },
-  { label: 'Ad Impressions', value: '6.2M+', icon: <VisibilityIcon fontSize="large" /> },
+  { label: 'Household Reach', value: '55M+', icon: <PeopleIcon fontSize="large" /> },
+  { label: 'Ad Impressions', value: '500M+', icon: <VisibilityIcon fontSize="large" /> },
   { label: 'Engagement Rate', value: '4.1%', icon: <ShowChartIcon fontSize="large" /> },
 ]
 
@@ -316,7 +316,7 @@ export default function CTVPage() {
           category: 'Premium Broadcasters',
           description:
             'Network-owned apps bringing broadcast and cable content into CTV.',
-          reach: '100M+ Households',
+          reach: '60M+ Households',
           examples: ['NBCUniversal', 'CBS', 'ABC', 'Fox'],
         },
       ].map((network, index) => (

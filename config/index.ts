@@ -1,7 +1,7 @@
 export const siteConfig = {
   site: {
     name: 'AdBliss',
-    description: 'Data-Powered B2B Advertising Platform',
+    description: 'Ai Data-Powered Advertising Platform',
   },
 
   logo: {
@@ -31,17 +31,17 @@ export const siteConfig = {
 
   content: {
     hero: {
-      headline: 'Data-Powered B2B\nAdvertising Platform',
+      headline: 'AI Backed Data - Powered\nAdvertising Platform',
       subheadline:
-        'Connect with high-value prospects using deterministic data and precision targeting that drives measurable growth for B2B companies.',
+        'Connect with high-value prospects using deterministic data and precision targeting that drives measurable growth for digital marketing companies.',
     },
     features: {
-      headline: 'Accelerate Your B2B Growth',
+      headline: 'Accelerate Your Digital Media Marketing',
       subheadline:
-        'Transform your marketing strategy with our comprehensive suite of tools designed for modern B2B companies.',
+        'Transform your marketing strategy with our comprehensive suite of tools designed for modern digital marketing companies.',
     },
     cta: {
-      headline: 'Ready to Transform Your B2B Marketing?',
+      headline: 'Ready to Transform Your  Marketing?',
       subheadline:
         'Join leading companies who trust AdBliss to drive their growth. Start your free trial today.',
     },

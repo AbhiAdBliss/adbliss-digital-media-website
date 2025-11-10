@@ -93,7 +93,7 @@ export default function DisplayAdvertising() {
               sx={{ mb: 4, maxWidth: '700px', mx: 'auto', color: '#f0f0f0' }}
             >
               Display ads that boost engagement and brand impact. Get effective
-              targeting and measurable & transparent reporting with Eskimi
+              targeting and measurable & transparent reporting with AdBliss
               display advertising.
             </Typography>
             <Link href="/contact" passHref>
@@ -273,7 +273,7 @@ export default function DisplayAdvertising() {
             {[
               {
                 title: 'Higher Engagement',
-                desc: 'Brands using Eskimi display ads see up to 37% higher click-through rates compared to industry averages.',
+                desc: 'Brands using AdBliss display ads see up to 37% higher click-through rates compared to industry averages.',
                 icon: <ShowChartIcon sx={{ fontSize: 50, color: '#6a11cb' }} />,
               },
               {
@@ -570,7 +570,7 @@ export default function DisplayAdvertising() {
               {
                 number: '01',
                 title: 'Brand safety',
-                desc: 'Keep your reputation safe with Eskimi or integrated 3rd party platforms.',
+                desc: 'Keep your reputation safe with AdBliss or integrated 3rd party platforms.',
               },
               {
                 number: '02',
@@ -590,7 +590,7 @@ export default function DisplayAdvertising() {
               {
                 number: '05',
                 title: 'Flexible advertising',
-                desc: 'Choose self-service, managed, or DSP of choice – work with Eskimi your way.',
+                desc: 'Choose self-service, managed, or DSP of choice – work with AdBliss your way.',
               },
               {
                 number: '06',
@@ -732,42 +732,24 @@ export default function DisplayAdvertising() {
           <Grid container spacing={4}>
             {[
               {
-                city: 'Vilnius',
-                address: 'Lvivo g. 25 09320 Vilnius\nLithuania',
+                city: 'Bengaluru(Registered Office)',
+                address: 'No. 426, 2nd Floor, Novel Tech Park, Kudlu Gate, Hosur Road, Bengaluru 560068 Karnataka',
               },
               {
-                city: 'Jakarta',
+                city: 'Patna',
                 address:
-                  'Revenue Tower, 19f. District 8, Jl. Jendral Su Senayan, Kebayoran Baru Kota Adm.\nIndonesia',
+                  'zircon complax 3rd floor Anishabad,  oposite bharat petroleum Anishabad, Patna 800002',
               },
               {
-                city: 'Athens',
-                address: 'Leof. Amarousiou 5, 141 23, Likovrisi, Greece',
+                city: 'Bengaluru',
+                address: '2nd Floor, Ojas Building, Shop 1316, D 9th Cross, 9th Main Rd, opp. to Tirumalagiri Venkateshwara Temple, above Harleys Fine Baking, 2nd Phase, J. P. Nagar, Bengaluru, Karnataka 560078',
               },
               {
-                city: 'Tokyo',
+                city: 'Dubai',
                 address:
-                  'Chiyoda City, Kanda Nishikicho, 2 Chome-2-1, Kanda Square, 11F Japan',
+                  '',
               },
-              {
-                city: 'Dhaka',
-                address:
-                  'Suvastu Muskan Tower (Level 17), 56 Gulshan Ave, Dhaka',
-              },
-              {
-                city: 'Lagos',
-                address:
-                  '3b Engineer George Enenmoh Crescent Lekki Phase 1 Lagos Nigeria',
-              },
-              {
-                city: 'Nairobi',
-                address: '9th Floor, WOJO at Mercure, Longonot Road, Nairobi',
-              },
-              {
-                city: 'Istanbul',
-                address:
-                  'Vişnezade Mah Süleyman Seba Caddesi No 79 İç Kapı No: 1 Beşiktaş Turkey',
-              },
+              
             ].map((office, i) => (
               <Grid item xs={12} sm={6} md={3} key={i}>
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>

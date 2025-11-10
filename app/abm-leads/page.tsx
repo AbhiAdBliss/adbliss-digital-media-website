@@ -72,7 +72,7 @@ const Page = () => {
       answer: (
         <div>
           <p>
-            We specialize in providing B2B lead generation and appointment
+            We specialize in providing Digital Marketing lead generation and appointment
             setting services to –
           </p>
           <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
@@ -108,7 +108,7 @@ const Page = () => {
   const services = [
     {
       icon: <BusinessIcon sx={{ fontSize: 48 }} />,
-      label: 'B2B Communication Strategy',
+      label: 'Digital Marketing Communication Strategy',
     },
     { icon: <DrawIcon sx={{ fontSize: 48 }} />, label: 'Content Creation' },
     {
@@ -131,7 +131,7 @@ const Page = () => {
     { icon: <EmailIcon sx={{ fontSize: 48 }} />, label: 'Corporate Branding' },
     {
       icon: <ContactMailIcon sx={{ fontSize: 48 }} />,
-      label: 'B2B Social Media',
+      label: 'Digital Marketing Social Media',
     },
     {
       icon: <SearchIcon sx={{ fontSize: 48 }} />,
@@ -176,7 +176,7 @@ const Page = () => {
                 variant="h5"
                 sx={{ mb: 4, opacity: 0.9, fontWeight: 400 }}
               >
-                Reach your B2B audience with premium digital billboards, transit
+                Reach your Digital Marketing audience with premium digital billboards, transit
                 displays, and interactive screens in high-traffic business
                 districts.
               </Typography>
@@ -549,7 +549,7 @@ const Page = () => {
             {[
               {
                 icon: <Timeline />,
-                title: 'Making B2B Buying Simple',
+                title: 'Making Digital Marketing Buying Simple',
                 description:
                   'ABM Leads connect you with key decision-makers, speeding engagement and boosting conversions.',
                 color: siteConfig.colors.primary,
@@ -579,7 +579,7 @@ const Page = () => {
                 icon: <HourglassEmpty />,
                 title: 'Long Sales Cycles',
                 description:
-                  'ABM shortens B2B sales cycles by targeting decision-makers early, accelerating engagement and revenue.',
+                  'ABM shortens Digital Marketing sales cycles by targeting decision-makers early, accelerating engagement and revenue.',
                 color: '#7c3aed',
               },
               {
@@ -745,7 +745,7 @@ const Page = () => {
               Premium ABM Lead Sources
             </Typography>
             <Typography variant="h6" color="text.secondary">
-              Access top-quality B2B leads aggregated from trusted professional
+              Access top-quality Digital Marketing leads aggregated from trusted professional
               channels and data partners.
             </Typography>
           </Box>
@@ -754,7 +754,7 @@ const Page = () => {
               {
                 category: 'Verified Business Decision Makers',
                 description:
-                  'Leading executive and decision-maker databases, curated from B2B data providers and firmographic sources.',
+                  'Leading executive and decision-maker databases, curated from Digital Marketing data providers and firmographic sources.',
                 reach: '18M+ Qualified Leads',
                 examples: [
                   'ZoomInfo',

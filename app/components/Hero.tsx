@@ -1,9 +1,9 @@
 'use client'
-import { Box, Typography, Button, Container, Chip, Stack } from '@mui/material'
-import { PlayArrow, TrendingUp, Security, Analytics } from '@mui/icons-material'
+import { Box, Typography, Container, Chip, Stack } from '@mui/material'
+import { TrendingUp, Security, Analytics } from '@mui/icons-material'
 import { keyframes } from '@emotion/react'
 import { siteConfig } from '../../config'
-import Link from 'next/link'
+
 
 const fadeInUp = keyframes`
   from {
@@ -131,24 +131,7 @@ export default function Hero() {
               animation: `${fadeInUp} 1s ease-out 0.6s both`,
             }}
           >
-            <Button
-              variant="outlined"
-              size="large"
-              component={Link}
-              href="/contact"
-              startIcon={<PlayArrow />}
-              sx={{
-                borderColor: 'white',
-                color: 'white',
-                '&:hover': {
-                  bgcolor: 'rgba(255, 255, 255, 0.1)',
-                  transform: 'translateY(-2px)',
-                },
-                transition: 'all 0.3s ease',
-              }}
-            >
-              Book Demo
-            </Button>
+           
           </Stack>
 
           <Stack
