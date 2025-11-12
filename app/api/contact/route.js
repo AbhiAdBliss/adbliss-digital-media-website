@@ -1,25 +1,25 @@
-import nodemailer from "nodemailer"
+import nodemailer from 'nodemailer';
 
 export async function POST(req) {
   try {
-    const body = await req.json()
-    const { role, firstName, lastName, company, email, country, comments } = body
+    const body = await req.json();
+    const { role, firstName, lastName, company, email, country, comments } = body;
 
-    //Configure transporter (direct credentials)
+    // Configure transporter (direct credentials)
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
+      host: 'smtp.gmail.com',
       port: 465,
       secure: true,
       auth: {
-        user: "abhishek@blissdigitalmedia.com", // sender email
-        pass: "strd rdnj ecwf vall", // Gmail app password
+        user: 'abhishek@blissdigitalmedia.com', // sender email
+        pass: 'strd rdnj ecwf vall', // Gmail app password
       },
-    })
+    });
 
     // 2️⃣ Branded AdBliss email template
     const mailOptions = {
-      from: `"AdBliss Contact" abhishek@blissdigitalmedia.com`,
-      to: "abhishek@blissdigitalmedia.com",
+      from: '\'AdBliss Contact\' <abhishek@blissdigitalmedia.com>',
+      to: 'abhishek@blissdigitalmedia.com',
       subject: `📩 New Contact Request from ${firstName} ${lastName}`,
       html: `
         <div style="
@@ -90,7 +90,7 @@ export async function POST(req) {
                   color: #111827;
                   white-space: pre-line;
                 ">
-                  ${comments || "No additional comments."}
+                  ${comments || 'No additional comments.'}
                 </div>
               </div>
             </div>
@@ -108,20 +108,20 @@ export async function POST(req) {
           </div>
         </div>
       `,
-    }
+    };
 
     // 3️⃣ Send email
-    await transporter.sendMail(mailOptions)
+    await transporter.sendMail(mailOptions);
 
     return new Response(
-      JSON.stringify({ success: true, message: "Email sent successfully" }),
+      JSON.stringify({ success: true, message: 'Email sent successfully' }),
       { status: 200 }
-    )
+    );
   } catch (error) {
-    console.error("Email error:", error)
+    console.error('Email error:', error);
     return new Response(
-      JSON.stringify({ success: false, error: "Failed to send email" }),
+      JSON.stringify({ success: false, error: 'Failed to send email' }),
       { status: 500 }
-    )
+    );
   }
 }

@@ -133,6 +133,7 @@ export default function Header({ minimal = false }: HeaderProps) {
       ],
     },
   ]
+  
 
   return (
     <HideOnScroll>
